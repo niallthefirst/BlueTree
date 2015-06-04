@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueTree_NiallFallon", "BlueTree_NiallFallon\BlueTree_NiallFallon.csproj", "{9336B0DE-4C0B-48E4-BB45-B7CB287511B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringTests", "StringTests\StringTests.csproj", "{9C71592C-EDB7-4310-AEFE-CE48A3F1A3F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringTestsTests", "StringTestsTests\StringTestsTests.csproj", "{BBEEB013-2C2A-4785-892A-F680AF37112E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepeaterChainLength", "RepeaterChainLength\RepeaterChainLength.csproj", "{89F02BFE-92D6-4C0B-A46C-68C12AB88A73}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepeaterChainLengthTests", "RepeaterChainLengthTests\RepeaterChainLengthTests.csproj", "{3A788076-9A47-4A17-83AF-C9F45CB03677}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9336B0DE-4C0B-48E4-BB45-B7CB287511B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9336B0DE-4C0B-48E4-BB45-B7CB287511B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9336B0DE-4C0B-48E4-BB45-B7CB287511B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9336B0DE-4C0B-48E4-BB45-B7CB287511B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C71592C-EDB7-4310-AEFE-CE48A3F1A3F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C71592C-EDB7-4310-AEFE-CE48A3F1A3F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C71592C-EDB7-4310-AEFE-CE48A3F1A3F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C71592C-EDB7-4310-AEFE-CE48A3F1A3F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBEEB013-2C2A-4785-892A-F680AF37112E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBEEB013-2C2A-4785-892A-F680AF37112E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBEEB013-2C2A-4785-892A-F680AF37112E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBEEB013-2C2A-4785-892A-F680AF37112E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89F02BFE-92D6-4C0B-A46C-68C12AB88A73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89F02BFE-92D6-4C0B-A46C-68C12AB88A73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89F02BFE-92D6-4C0B-A46C-68C12AB88A73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89F02BFE-92D6-4C0B-A46C-68C12AB88A73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A788076-9A47-4A17-83AF-C9F45CB03677}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A788076-9A47-4A17-83AF-C9F45CB03677}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A788076-9A47-4A17-83AF-C9F45CB03677}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A788076-9A47-4A17-83AF-C9F45CB03677}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
