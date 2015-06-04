@@ -35,7 +35,7 @@ namespace RepeaterChainLength.Tests
             };
 
 
-            simpleRadioStation.CreateRepeaters(repeaters);
+            simpleRadioStation.AddRepeaters(repeaters);
 
             actual = simpleRadioStation.GetLongestChainOfRepeaters();
             
@@ -62,7 +62,7 @@ namespace RepeaterChainLength.Tests
             };
 
 
-            simpleRadioStation.CreateRepeaters(repeaters);
+            simpleRadioStation.AddRepeaters(repeaters);
 
             var orphanedRepeaters = simpleRadioStation.GetOrphanedRepeaters();
 
@@ -71,6 +71,52 @@ namespace RepeaterChainLength.Tests
 
             //Assert
             Assert.AreEqual(expected, actual);
+        }
+
+        [ExpectedException(typeof(Exception), "An Transeiver with the same Downstream Frequency 5 already exists")]
+        [TestMethod()]
+        public void DuplicateDownStreamTest()
+        {
+            //Arrange
+            SimpleRadioStation simpleRadioStation = new SimpleRadioStation();
+
+
+            //Act
+            List<Repeater> repeaters = new List<Repeater>(){
+                new Repeater(0,1),
+                new Repeater(0,5),
+                new Repeater(3,5),
+                new Repeater(0,5)
+            };
+
+
+            simpleRadioStation.AddRepeaters(repeaters);
+
+
+
+        }
+
+        [ExpectedException(typeof(Exception), "DownStream Frequency cannot be less than 0.")]
+        [TestMethod()]
+        public void TooLowDownStreamTest()
+        {
+            //Arrange
+            SimpleRadioStation simpleRadioStation = new SimpleRadioStation();
+
+            
+            //Act
+            List<Repeater> repeaters = new List<Repeater>(){
+                new Repeater(0,1),
+                new Repeater(1,2),
+                new Repeater(0,5),
+                new Repeater(0,5)
+            };
+
+
+            simpleRadioStation.AddRepeaters(repeaters);
+
+            
+
         }
     }
 }

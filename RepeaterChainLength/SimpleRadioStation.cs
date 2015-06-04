@@ -31,14 +31,25 @@ namespace RepeaterChainLength
             _tranceivers.Add(centralReceiver);
 
         }
-        public void CreateRepeaters(List<Repeater> repeaters)
+        public void AddRepeaters(List<Repeater> repeaters)
         {
             int index = 1;
             foreach (var repeater in repeaters)
             {
                 repeater.Index = index;
+                ValidateDownStreamChannel(repeater);
                 _tranceivers.Add(repeater);
                 index++;
+            }
+        }
+
+        private void ValidateDownStreamChannel(Repeater repeater)
+        {
+            foreach(var existingRepeater in _tranceivers)
+            {
+                if (existingRepeater.DownStreamFrequency == repeater.DownStreamFrequency)
+                    throw new Exception(string.Format("An Transeiver with the same Downstream Frequency {0} already exists", repeater.DownStreamFrequency));
+
             }
         }
         public int GetLongestChainOfRepeaters()
@@ -156,20 +167,28 @@ namespace RepeaterChainLength
         }
 
         int _upStreamFrequency;
+        /// <summary>
+        /// closer to central node
+        /// </summary>
         public int UpStreamFrequency
         {
             get { return _upStreamFrequency; }
-            set { _upStreamFrequency = value; }
+            set {
+                _upStreamFrequency = value; }
         }
+
         int _downStreamFrequency;
-        public int DownStreamFrequency
+        /// <summary>
+        /// further from central node
+        /// </summary>
+        public virtual int DownStreamFrequency
         {
             get { return _downStreamFrequency; }
             set
             {
-                //if (value <= 0)
-                //    throw new Exception("DownStream Frequency cannot be less than 0.");
-
+                if (value > 19)
+                    throw new Exception("Downstream Channel too large.");
+                
 
                 _downStreamFrequency = value;
             }
@@ -204,6 +223,21 @@ namespace RepeaterChainLength
         {
             
         }
-        
+
+        /// <summary>
+        /// further from central node
+        /// </summary>
+        public override int DownStreamFrequency
+        {
+            get { return base.DownStreamFrequency; }
+            set
+            {
+                if (value <= 0)
+                    throw new Exception("DownStream Frequency cannot be less than 0.");
+
+
+                base.DownStreamFrequency = value;
+            }
+        }
     }
 }
