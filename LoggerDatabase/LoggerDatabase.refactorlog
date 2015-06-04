@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="3bcff0c6-ab8c-442d-a713-191cd4b37b0c" ChangeDateTime="06/04/2015 14:58:25">
+    <Property Name="ElementName" Value="[dbo].[Logger].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Logger]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="SerialNumber" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="5052e626-0490-435b-a778-b6f00a6ec034" ChangeDateTime="06/04/2015 14:59:51">
+    <Property Name="ElementName" Value="[dbo].[Vehicle].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Vehicle]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="RegistrationNumber" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="88ae6b70-caea-4de0-b3db-8a05d56745b0" ChangeDateTime="06/04/2015 15:00:27">
+    <Property Name="ElementName" Value="[dbo].[GPSLocation].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[GPSLocation]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="94e51c85-84d9-4de8-9fd1-876b067c00df" ChangeDateTime="06/04/2015 15:05:52">
+    <Property Name="ElementName" Value="[dbo].[Vehicle].[Logger]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Vehicle]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="LoggerID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="a270f288-9801-4ed3-b1a2-4eda3a97a583" ChangeDateTime="06/04/2015 15:06:00">
+    <Property Name="ElementName" Value="[dbo].[Vehicle].[LoggerID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Vehicle]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="LoggerSerialNumber" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="34b892f4-7d5e-4eac-a552-4fab40a4ce33" ChangeDateTime="06/04/2015 15:17:25">
+    <Property Name="ElementName" Value="[dbo].[LoggerHistory].[History]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[LoggerHistory]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Text" />
+  </Operation>
+</Operations>

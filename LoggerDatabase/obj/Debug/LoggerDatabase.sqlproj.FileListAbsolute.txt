@@ -1,0 +1,7 @@
+D:\Documents\GitHub\BlueTree_NiallFallon\BlueTree\LoggerDatabase\bin\Debug\LoggerDatabase.dacpac
+D:\Documents\GitHub\BlueTree_NiallFallon\BlueTree\LoggerDatabase\obj\Debug\Model.xml
+D:\Documents\GitHub\BlueTree_NiallFallon\BlueTree\LoggerDatabase\obj\Debug\refactor.xml
+D:\Documents\GitHub\BlueTree_NiallFallon\BlueTree\LoggerDatabase\obj\Debug\postdeploy.sql
+D:\Documents\GitHub\BlueTree_NiallFallon\BlueTree\LoggerDatabase\obj\Debug\predeploy.sql
+D:\Documents\GitHub\BlueTree_NiallFallon\BlueTree\LoggerDatabase\obj\Debug\LoggerDatabase.dll
+D:\Documents\GitHub\BlueTree_NiallFallon\BlueTree\LoggerDatabase\obj\Debug\LoggerDatabase.pdb

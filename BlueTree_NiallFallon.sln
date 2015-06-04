@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepeaterChainLength", "Repe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepeaterChainLengthTests", "RepeaterChainLengthTests\RepeaterChainLengthTests.csproj", "{3A788076-9A47-4A17-83AF-C9F45CB03677}"
 EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "LoggerDatabase", "LoggerDatabase\LoggerDatabase.sqlproj", "{6E4853DE-5CD8-4900-AEFE-56D2CAF22AF7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,12 @@ Global
 		{3A788076-9A47-4A17-83AF-C9F45CB03677}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A788076-9A47-4A17-83AF-C9F45CB03677}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3A788076-9A47-4A17-83AF-C9F45CB03677}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E4853DE-5CD8-4900-AEFE-56D2CAF22AF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E4853DE-5CD8-4900-AEFE-56D2CAF22AF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E4853DE-5CD8-4900-AEFE-56D2CAF22AF7}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{6E4853DE-5CD8-4900-AEFE-56D2CAF22AF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E4853DE-5CD8-4900-AEFE-56D2CAF22AF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E4853DE-5CD8-4900-AEFE-56D2CAF22AF7}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
