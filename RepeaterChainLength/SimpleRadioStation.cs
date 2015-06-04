@@ -31,18 +31,14 @@ namespace RepeaterChainLength
             _tranceivers.Add(centralReceiver);
 
         }
-        public void AddRepeaters(List<Repeater> repeaters)
-        {
-            int index = 1;
-            foreach (var repeater in repeaters)
-            {
-                repeater.Index = index;
-                ValidateDownStreamChannel(repeater);
-                _tranceivers.Add(repeater);
-                index++;
-            }
+        public void AddRepeater(int upstreamFrequency, int downStreamFrequency)
+        { 
+            var repeater = new Repeater(upstreamFrequency, downStreamFrequency);
+            repeater.Index = _tranceivers.Count + 1;
+            ValidateDownStreamChannel(repeater);
+            _tranceivers.Add(repeater);
         }
-
+        
         private void ValidateDownStreamChannel(Repeater repeater)
         {
             foreach(var existingRepeater in _tranceivers)
@@ -98,8 +94,21 @@ namespace RepeaterChainLength
             }
             return length;
         }
+        public string GetOrphanedRepeatersAsString()
+        {
+            string result = null;
+            StringBuilder sb = new StringBuilder();
+            var orphanedRepeaters = GetOrphanedRepeaters();
 
-        public List<Transceiver> GetOrphanedRepeaters()
+            foreach (var repeater in orphanedRepeaters)
+                sb.Append(repeater.ToString());
+
+            result = sb.ToString();
+
+
+            return result;
+        }
+        private List<Transceiver> GetOrphanedRepeaters()
         {
             List<Transceiver> result = new List<Transceiver>();
             //start with the down.
@@ -155,7 +164,7 @@ namespace RepeaterChainLength
         }
     }
 
-    public class Transceiver
+    abstract class Transceiver
     {
         List<int> _frequencies = new List<int>(20);
         int _index;
@@ -206,7 +215,7 @@ namespace RepeaterChainLength
         }
     }
 
-    public class CentralReceiver : Transceiver
+    internal class CentralReceiver : Transceiver
     {
         
         public CentralReceiver() : base(0, 0)
@@ -215,7 +224,7 @@ namespace RepeaterChainLength
         }
     }
 
-    public class Repeater : Transceiver
+    internal class Repeater : Transceiver
     {
         
 

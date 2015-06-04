@@ -13,20 +13,22 @@ namespace StringTests
         /// For example, permute("abc") should print (not necessarily in this order): abc acb bac bca cab cba
         /// </summary>
         /// <param name="value"></param>
-        public static void Permute(string value)
+        public static List<string> Permute(string value)
         {
-            GetPer(value.ToCharArray());
-            //foreach (var permutation in QuestionThree.permute(value))
-              //  Console.WriteLine(permutation + " ");
+            if (value == null)
+                return null;
+
+            var result = GetPermutation(value.ToCharArray());
+
+            foreach (var s in result)
+            {
+                Console.Write(s + " ");
+                
+            }
+
+            return result.ToList();
         }
-        //public static List<string> permute(string value)
-        //{
-        //    List<string> result = null;
-
-
-
-        //    return result;
-        //}
+       
 
         private static void Swap(ref char a, ref char b)
         {
@@ -37,26 +39,35 @@ namespace StringTests
             a ^= b;
         }
 
-        private static void GetPer(char[] list)
+        private static List<string> GetPermutation(char[] list)
         {
             int x = list.Length - 1;
-            GetPer(list, 0, x);
+
+            List<string> result = new List<string>();
+            return GetPermutation(list, 0, x, result);
+
+
         }
 
-        private static void GetPer(char[] list, int k, int m)
+        private static List<string> GetPermutation(char[] list, int index, int count, List<string> result)
         {
-            if (k == m)
+            
+            if (index == count)
             {
-                Console.Write(list);
-                Console.Write(" ");
+                result.Add( new string(list));
             }
             else
-                for (int i = k; i <= m; i++)
+                for (int i = index; i <= count; i++)
                 {
-                    Swap(ref list[k], ref list[i]);
-                    GetPer(list, k + 1, m);
-                    Swap(ref list[k], ref list[i]);
+                    Swap(ref list[index], ref list[i]);
+                    GetPermutation(list, index + 1, count, result);
+                    Swap(ref list[index], ref list[i]);
                 }
+
+
+            return result;
         }
+
+
     }
 }

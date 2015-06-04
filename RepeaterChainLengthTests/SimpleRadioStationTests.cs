@@ -27,15 +27,11 @@ namespace RepeaterChainLength.Tests
             int actual = 0;
 
             //Act
-            List<Repeater> repeaters = new List<Repeater>(){
-                new Repeater(0,1),
-                new Repeater(1,2),
-                new Repeater(3,4),
-                new Repeater(0,5)
-            };
-
-
-            simpleRadioStation.AddRepeaters(repeaters);
+            simpleRadioStation.AddRepeater(0, 1);
+            simpleRadioStation.AddRepeater(1, 2);
+            simpleRadioStation.AddRepeater(3, 4);
+            simpleRadioStation.AddRepeater(0, 5);
+            
 
             actual = simpleRadioStation.GetLongestChainOfRepeaters();
             
@@ -54,20 +50,14 @@ namespace RepeaterChainLength.Tests
             string actual = string.Empty;
 
             //Act
-            List<Repeater> repeaters = new List<Repeater>(){
-                new Repeater(0,1),
-                new Repeater(1,2),
-                new Repeater(3,4),
-                new Repeater(0,5)
-            };
+         
+            simpleRadioStation.AddRepeater(0, 1);
+            simpleRadioStation.AddRepeater(1, 2);
+            simpleRadioStation.AddRepeater(3, 4);
+            simpleRadioStation.AddRepeater(0, 5);
+            
 
-
-            simpleRadioStation.AddRepeaters(repeaters);
-
-            var orphanedRepeaters = simpleRadioStation.GetOrphanedRepeaters();
-
-            foreach (var repeater in orphanedRepeaters)
-                actual += repeater.ToString();
+            actual = simpleRadioStation.GetOrphanedRepeatersAsString();
 
             //Assert
             Assert.AreEqual(expected, actual);
@@ -82,16 +72,11 @@ namespace RepeaterChainLength.Tests
 
 
             //Act
-            List<Repeater> repeaters = new List<Repeater>(){
-                new Repeater(0,1),
-                new Repeater(0,5),
-                new Repeater(3,5),
-                new Repeater(0,5)
-            };
-
-
-            simpleRadioStation.AddRepeaters(repeaters);
-
+            simpleRadioStation.AddRepeater(0,1);
+            simpleRadioStation.AddRepeater(1,2);
+            simpleRadioStation.AddRepeater(0,5);
+            simpleRadioStation.AddRepeater(0,5);
+            
 
 
         }
@@ -105,15 +90,11 @@ namespace RepeaterChainLength.Tests
 
             
             //Act
-            List<Repeater> repeaters = new List<Repeater>(){
-                new Repeater(0,1),
-                new Repeater(1,2),
-                new Repeater(0,5),
-                new Repeater(0,5)
-            };
-
-
-            simpleRadioStation.AddRepeaters(repeaters);
+            simpleRadioStation.AddRepeater(0, 1);
+            simpleRadioStation.AddRepeater(1, 2);
+            simpleRadioStation.AddRepeater(0, 5);
+            simpleRadioStation.AddRepeater(0, 5);
+            
 
             
 
